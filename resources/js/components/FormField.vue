@@ -45,6 +45,9 @@ export default {
                 heading: this.field.options.heading,
                 image: this.field.options.image,
                 fontFamily: this.field.options.fontFamily,
+                mediaEmbed: {
+                    previewsInData: true,
+                },
                 extraPlugins: [
                     this.createUploadAdapterPlugin
                 ],
