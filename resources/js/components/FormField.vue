@@ -76,6 +76,8 @@ export default {
                 editorConfig.extraPlugins = []
             }
 
+            console.log(editorConfig);
+
             return editorConfig
         }
     },
