@@ -19,7 +19,7 @@
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 
