@@ -33,6 +33,9 @@ export default {
     props: ['resourceName', 'resourceId', 'field'],
 
     data () {
+
+        ClassicEditor.builtinPlugins.push(HtmlEmbed);
+
         return {
             editor: ClassicEditor,
             defaultEditorConfig: {
