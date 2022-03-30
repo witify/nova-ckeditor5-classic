@@ -19,8 +19,6 @@
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
-import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
-
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -48,6 +46,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+
+import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
 
 class ClassicEditor extends ClassicEditorBase {}
 
@@ -107,7 +107,7 @@ export default {
                     previewsInData: true,
                 },
                 extraPlugins: [
-                    this.createUploadAdapterPlugin,
+                    //this.createUploadAdapterPlugin,
                 ],
                 link: this.field.options.link
             }
@@ -120,21 +120,6 @@ export default {
         },
         editorConfig: function() {
             let editorConfig = this.defaultEditorConfig
-
-            if (! editorConfig.nova.field.withFiles) {
-                editorConfig.removePlugins = [
-                    'Image',
-                    'ImageToolbar',
-                    'ImageCaption',
-                    'ImageStyle',
-                    'ImageTextAlternate',
-                    'ImageUpload'
-                ]
-                editorConfig.image = {}
-                editorConfig.extraPlugins = []
-            }
-
-            console.log(editorConfig);
 
             return editorConfig
         }
