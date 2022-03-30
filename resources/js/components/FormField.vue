@@ -72,7 +72,7 @@ ClassicEditor.builtinPlugins = [
 	Link,
 	List,
 	MediaEmbed,
-    HtmlEmbed,
+    //HtmlEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
@@ -107,7 +107,7 @@ export default {
                     previewsInData: true,
                 },
                 extraPlugins: [
-                    //this.createUploadAdapterPlugin,
+                    this.createUploadAdapterPlugin,
                 ],
                 link: this.field.options.link
             }
