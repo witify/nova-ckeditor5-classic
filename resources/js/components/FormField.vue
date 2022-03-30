@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import { FormField, HandlesValidationErrors } from 'laravel-nova'
-import CKEditor from '@ckeditor/ckeditor5-vue2'
+import { FormField, HandlesValidationErrors } from 'laravel-nova';
+import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -72,7 +72,7 @@ ClassicEditor.builtinPlugins = [
 	Link,
 	List,
 	MediaEmbed,
-    //HtmlEmbed,
+    HtmlEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
