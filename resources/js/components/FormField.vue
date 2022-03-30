@@ -72,57 +72,13 @@ ClassicEditor.builtinPlugins = [
 	Link,
 	List,
 	MediaEmbed,
+    HtmlEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
 	TableToolbar,
 	TextTransformation
 ];
-
-// Editor configuration.
-ClassicEditor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'outdent',
-			'indent',
-			'|',
-			'uploadImage',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
-		]
-	},
-	image: {
-		toolbar: [
-			'imageStyle:inline',
-			'imageStyle:block',
-			'imageStyle:side',
-			'|',
-			'toggleImageCaption',
-			'imageTextAlternative'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
-	},
-	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
-};
-
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -134,9 +90,6 @@ export default {
     props: ['resourceName', 'resourceId', 'field'],
 
     data () {
-
-        ClassicEditor.builtinPlugins.push(HtmlEmbed);
-
         return {
             editor: ClassicEditor,
             defaultEditorConfig: {
