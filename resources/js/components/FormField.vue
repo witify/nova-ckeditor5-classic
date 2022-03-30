@@ -21,7 +21,6 @@ import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
-import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -51,7 +50,6 @@ export default {
                 },
                 extraPlugins: [
                     this.createUploadAdapterPlugin,
-                    HtmlEmbed,
                 ],
                 link: this.field.options.link
             }
