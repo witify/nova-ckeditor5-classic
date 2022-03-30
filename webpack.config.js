@@ -21,13 +21,8 @@ module.exports = {
 	entry: path.resolve( __dirname, 'resources/js', 'field.js' ),
 
 	output: {
-		// The name under which the editor will be exported.
-		library: 'ClassicEditor',
-
 		path: path.resolve( __dirname, 'dist', 'js' ),
 		filename: 'field.js',
-		libraryTarget: 'umd',
-		libraryExport: 'default'
 	},
 
 	optimization: {
